@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Banana Republic Challenge</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card__profile">
+            <img src="./img/face.svg" alt="profile">
+            <h4>Front-end challenge!</h4>
+            <p>This is a design that you will need to code up and impress us.</p>
+            <button class="openbtn" onclick="openNav()"></button>
+        </div>
+
+        <div class="card__info">
+            <form method="post" class="form">
+                <label class="form__label" for="name"> Name <input type="text" />
+                </label>
+
+                <label class="form__label--select"> Gender
+                    <img src="./img/venus-symbol.svg" alt="female">
+                    <input type="radio" name="gender" value="female" class="form__input" />
+                </label>
+                <label class="form__label--select">
+                    <img src="./img/mars-symbol.svg" alt="male">
+                    <input type="radio" name="gender" value="male" />
+                </label>
+
+                <label class="form__label" for="date">Date of Birth
+                    <input type="date" src="./img/calendar.svg" />
+                </label>
+
+                <label class="form__label" for="email">Email
+                    <input type="text">
+                </label>
+
+                <label class="form__label" for="mobile">Mobile
+                    <input type="tel">
+                </label>
+
+                <label class="form__label" for="id">Customer ID
+                    <input type="text">
+                </label>
+
+                <label class="form__label--select"> Membership
+                    <img src="./img/card.svg" alt="classic"> Classic
+                    <input type="radio" name="gender" value="classic" class="form__input" />
+                </label>
+                <label class="form__label--select">
+                    <img src="./img/card.svg" alt="silver"> Silver
+                    <input type="radio" name="gender" value="silver" />
+                </label>
+                <label class="form__label--select">
+                    <img src="./img/card.svg" alt="gold"> Gold
+                    <input type="radio" name="gender" value="gold" />
+                </label>
+            </form>
+        </div>
+
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h4>My World Today</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero laudantium neque maiores minima
+                enim quibusdam autem, alias facilis possimus dolore quia aliquid cupiditate perferendis fugiat soluta
+                illum non odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, in maiores fugiat
+                incidunt similique voluptate a iure sapiente ipsam tempore ullam nemo. Excepturi quam eveniet at in
+                labore illum id?</p>
+        </div>
+    </div>
+</body>
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "65%";
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    } </script>
+
+</html>

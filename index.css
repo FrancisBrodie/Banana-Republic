@@ -126,19 +126,13 @@ form {
 
 }
 
-/* .form__label--dob img {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-} */
-
 .form__check {
     display: flex;
     align-items: center;
 }
 
 .form__check p {
-    /* font-size: .8em; */
+    font-size: .8em;
     align-items: center;
     text-align: center;
     padding-left: 8px;
@@ -160,10 +154,37 @@ label[for="toggle"] {
     display: block;
     bottom: 0;
     left: 50px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
+}
+
+.form__button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4px;
+}
+
+.btn__cancel {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.btn__save {
+    background-color: #39b298;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
 }
 
 .sidepanel {

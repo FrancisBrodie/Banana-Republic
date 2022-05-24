@@ -26,8 +26,8 @@
                     <input type="text" />
                 </label>
                 <div class="form__check">
+                    <p>Gender</p>
                     <label class="form__label--select">
-                        <p>Gender</p>
                         <img src="./img/venus-symbol.svg" alt="female">
                         <input type="radio" name="gender" value="female" class="form__input" />
                     </label>
@@ -57,8 +57,9 @@
                     <input type="text">
                 </label>
                 <div class="form__check">
+                    <p>Membership</p>
                     <label class="form__label--select" for="toggle">
-                        <p>Membership</p>
+
                         <img src="./img/card.svg" alt="classic"> Classic
                         <input type="checkbox" name="gender" value="classic" class="form__input" id="toggle" />
                     </label>
@@ -71,8 +72,11 @@
                         <input type="checkbox" name="gender" value="gold" id="toggle" />
                     </label>
                 </div>
-                <button>Save</button>
-                <button>cancel</button>
+
+                <div class="form__button">
+                    <input type="reset" value="Cancel" class="btn__cancel" />
+                    <input type="submit" value="Save" class="btn__save" />
+                </div>
             </form>
             <div id="mySidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

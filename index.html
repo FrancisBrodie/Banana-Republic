@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <title>Banana Republic Challenge</title>
 </head>
 
@@ -21,10 +21,12 @@
 
         <div class="card__info">
             <form method="post" class="form">
+
                 <label class="form__label" for="name">
                     <p>Name</p>
                     <input type="text" />
                 </label>
+
                 <div class="form__check">
                     <p>Gender</p>
                     <label class="form__label--select">
@@ -33,9 +35,10 @@
                     </label>
                     <label class="form__label--select">
                         <img src="./img/mars-symbol.svg" alt="male">
-                        <input type="radio" name="gender" value="male" />
+                        <input type="radio" name="gender" value="male" class="form__input" />
                     </label>
                 </div>
+
                 <label class="form__label">
                     <p>Date of Birth</p>
                     <input type="date" value="date" />
@@ -56,20 +59,20 @@
                     <p>Customer ID</p>
                     <input type="text">
                 </label>
+
                 <div class="form__check">
                     <p>Membership</p>
                     <label class="form__label--select" for="toggle">
-
                         <img src="./img/card.svg" alt="classic"> Classic
-                        <input type="checkbox" name="gender" value="classic" class="form__input" id="toggle" />
+                        <input type="radio" name="gender" value="classic" class="form__input toggle" id="toggle" />
                     </label>
                     <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="silver"> Silver
-                        <input type="checkbox" name="gender" value="silver" id="toggle" />
+                        <input type="radio" name="gender" value="silver" class="form__input toggle" id="toggle" />
                     </label>
                     <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="gold"> Gold
-                        <input type="checkbox" name="gender" value="gold" id="toggle" />
+                        <input type="radio" name="gender" value="gold" class="form__input toggle" id="toggle" />
                     </label>
                 </div>
 
@@ -78,6 +81,7 @@
                     <input type="submit" value="Save" class="btn__save" />
                 </div>
             </form>
+
             <div id="mySidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <h4>My World Today</h4>
@@ -85,21 +89,14 @@
                     minima
                     enim quibusdam autem, alias facilis possimus dolore quia aliquid cupiditate perferendis fugiat
                     soluta
-                    illum non odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, in maiores fugiat
-                    incidunt similique voluptate a iure sapiente ipsam tempore ullam nemo. Excepturi quam eveniet at in
+                    illum non odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, in maiores
+                    fugiat
+                    incidunt similique voluptate a iure sapiente ipsam tempore ullam nemo. Excepturi quam eveniet at
+                    in
                     labore illum id?</p>
             </div>
         </div>
     </div>
 </body>
-<script>
-    function openNav() {
-        document.getElementById("mySidepanel").style.width = "100%";
-    }
-
-    /* Set the width of the sidebar to 0 (hide it) */
-    function closeNav() {
-        document.getElementById("mySidepanel").style.width = "0";
-    } </script>
 
 </html>

@@ -2,7 +2,7 @@
 
 :root {
     --margin-bottom: 5px;
-    --accent-color: orange;
+    --accent-color: darkorange;
 }
 
 * {
@@ -72,7 +72,7 @@ body {
     flex: 2;
     padding: 30px 25px;
     margin: 10px;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     /* white-space: pre-wrap; add to specfic classes */
 }
@@ -89,45 +89,45 @@ form {
 .form__label {
     display: flex;
     flex-direction: row;
-    margin-bottom: .5rem;
     gap: .25em;
     font-size: .8em;
-    padding: .4rem;
     margin: 4px;
+    margin-left: 20px;
     text-align: left;
     justify-content: space-between;
+    position: relative;
+    align-items: baseline;
+
+}
+
+.form__label input {
+    padding: 8px;
+    width: fit-content;
+    background-color: rgb(240, 240, 240);
+    border: none;
 }
 
 .form__label--select {
-    /* display: flex;
-
-    margin-bottom: .5rem;
-    gap: .25em;
-    
-    padding: .4rem;
-    margin: 4px;
-    justify-content: space-between; */
-
+    display: flex;
     border-radius: .5rem;
     padding: .5rem;
     background: transparent;
     max-width: 300px;
     margin: 0 auto;
-    flex-direction: column;
+    flex-direction: row;
     font-size: .8em;
 }
 
+.form__check {
+    display: flex;
+    font-size: .8em;
+    align-items: center;
+}
 
-button {
-    border-radius: 50%;
-    padding: 20px;
-    margin-top: 20px;
-    position: relative;
-    background-image: url(./img/arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    background-color: #3b3b3b;
+.form__label--select img {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
 }
 
 .sidepanel {
@@ -140,10 +140,11 @@ button {
     z-index: 1;
     transition: 0.5s;
     width: 0;
-    height: 70vh;
+    height: 100%;
     overflow-x: hidden;
-    background-color: orange;
+    background-color: darkorange;
     color: #3b3b3b;
+    margin: 0;
 }
 
 .sidepanel h4 {
@@ -169,8 +170,24 @@ button {
     /* margin-left: 50px; */
 }
 
-
+.openbtn {
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    background-image: url(./img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: #3b3b3b;
+}
 
 .openbtn:hover {
     background-color: #444;
+}
+
+.openbtn:active {
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
+    transform: rotate(180deg);
 }

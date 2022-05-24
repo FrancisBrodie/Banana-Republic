@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script src="./script.js"></script>
     <title>Banana Republic Challenge</title>
 </head>
 
@@ -20,10 +21,13 @@
 
         <div class="card__info">
             <form method="post" class="form">
-                <label class="form__label" for="name"> Name <input type="text" />
+                <label class="form__label" for="name">
+                    <p>Name</p>
+                    <input type="text" />
                 </label>
-                <div class="form__check">Gender
+                <div class="form__check">
                     <label class="form__label--select">
+                        <p>Gender</p>
                         <img src="./img/venus-symbol.svg" alt="female">
                         <input type="radio" name="gender" value="female" class="form__input" />
                     </label>
@@ -33,36 +37,42 @@
                     </label>
                 </div>
                 <label class="form__label">
-                    Date of Birth
+                    <p>Date of Birth</p>
                     <input type="date" value="date" />
                     <img src="./img/calendar.svg" alt="date">
                 </label>
 
-                <label class="form__label" for="email">Email
+                <label class="form__label" for="email">
+                    <p>Email</p>
                     <input type="text">
                 </label>
 
-                <label class="form__label" for="mobile">Mobile
+                <label class="form__label" for="mobile">
+                    <p>Mobile</p>
                     <input type="tel">
                 </label>
 
-                <label class="form__label" for="id">Customer ID
+                <label class="form__label" for="id">
+                    <p>Customer ID</p>
                     <input type="text">
                 </label>
-                <div class="form__check">Membership
-                    <label class="form__label--select">
+                <div class="form__check">
+                    <label class="form__label--select" for="toggle">
+                        <p>Membership</p>
                         <img src="./img/card.svg" alt="classic"> Classic
-                        <input type="radio" name="gender" value="classic" class="form__input" />
+                        <input type="checkbox" name="gender" value="classic" class="form__input" id="toggle" />
                     </label>
-                    <label class="form__label--select">
+                    <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="silver"> Silver
-                        <input type="radio" name="gender" value="silver" />
+                        <input type="checkbox" name="gender" value="silver" id="toggle" />
                     </label>
-                    <label class="form__label--select">
+                    <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="gold"> Gold
-                        <input type="radio" name="gender" value="gold" />
+                        <input type="checkbox" name="gender" value="gold" id="toggle" />
                     </label>
                 </div>
+                <button>Save</button>
+                <button>cancel</button>
             </form>
             <div id="mySidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

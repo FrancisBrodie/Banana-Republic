@@ -97,7 +97,6 @@ form {
     justify-content: space-between;
     position: relative;
     align-items: baseline;
-
 }
 
 .form__label input {
@@ -105,6 +104,7 @@ form {
     width: fit-content;
     background-color: rgb(240, 240, 240);
     border: none;
+    align-items: flex-end;
 }
 
 .form__label--select {
@@ -118,16 +118,52 @@ form {
     font-size: .8em;
 }
 
-.form__check {
-    display: flex;
-    font-size: .8em;
-    align-items: center;
-}
-
 .form__label--select img {
     display: flex;
     flex-direction: column;
     background-color: rgb(240, 240, 240);
+    margin: 8px;
+
+}
+
+/* .form__label--dob img {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+} */
+
+.form__check {
+    display: flex;
+    align-items: center;
+}
+
+.form__check p {
+    /* font-size: .8em; */
+    align-items: center;
+    text-align: center;
+    padding-left: 8px;
+}
+
+#toggle {
+    display: none;
+}
+
+label[for="toggle"] {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 100%;
+
+}
+
+#toggle:checked {
+    display: block;
+    bottom: 0;
+    left: 50px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .sidepanel {
@@ -167,6 +203,7 @@ form {
     /* top: 0; */
     right: 25px;
     font-size: 36px;
+    color: #3b3b3b;
     /* margin-left: 50px; */
 }
 

@@ -16,7 +16,7 @@
             <img src="./img/face.svg" alt="profile">
             <h4>Front-end challenge!</h4>
             <p>This is a design that you will need to code up and impress us.</p>
-            <button class="openbtn" onclick="openNav()"></button>
+            <button class="open__button" onclick="openNav()"></button>
         </div>
 
         <div class="card__info">
@@ -27,7 +27,7 @@
                     <input type="text" />
                 </label>
 
-                <div class="form__check">
+                <fieldset class="form__label">
                     <p>Gender</p>
                     <label class="form__label--select">
                         <img src="./img/venus-symbol.svg" alt="female">
@@ -37,7 +37,7 @@
                         <img src="./img/mars-symbol.svg" alt="male">
                         <input type="radio" name="gender" value="male" class="form__input" />
                     </label>
-                </div>
+                </fieldset>
 
                 <label class="form__label">
                     <p>Date of Birth</p>
@@ -60,33 +60,33 @@
                     <input type="text">
                 </label>
 
-                <div class="form__check">
+                <fieldset class="form__label">
                     <p>Membership</p>
                     <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="classic"> Classic
-                        <input type="radio" name="gender" value="classic" class="form__input toggle" id="toggle" />
+                        <input type="radio" name="membership" value="classic" class="form__input toggle" id="toggle" />
                     </label>
                     <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="silver"> Silver
-                        <input type="radio" name="gender" value="silver" class="form__input toggle" id="toggle" />
+                        <input type="radio" name="membership" value="silver" class="form__input toggle" id="toggle" />
                     </label>
                     <label class="form__label--select" for="toggle">
                         <img src="./img/card.svg" alt="gold"> Gold
-                        <input type="radio" name="gender" value="gold" class="form__input toggle" id="toggle" />
+                        <input type="radio" name="membership" value="gold" class="form__input toggle" id="toggle" />
                     </label>
-                </div>
+                </fieldset>
 
                 <div class="form__button">
-                    <input type="reset" value="Cancel" class="btn__cancel" />
-                    <input type="submit" value="Save" class="btn__save" />
+                    <input type="reset" value="Cancel" class="cancel__button" />
+                    <input type="submit" value="Save" class="save__button" />
                 </div>
             </form>
 
             <div id="mySidepanel" class="sidepanel">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" class="close__button" onclick="closeNav()">&times;</a>
                 <h4>My World Today</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero laudantium neque maiores
-                    minima
+                    minima<a href="#"> View all days</a>
                     enim quibusdam autem, alias facilis possimus dolore quia aliquid cupiditate perferendis fugiat
                     soluta
                     illum non odit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, in maiores

@@ -20,13 +20,13 @@ body {
 }
 
 .card {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70vw;
     height: 70vh;
-    display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     box-shadow: 1 1px 20px 0 rgba(69, 90, 100, 0.08);
@@ -79,7 +79,6 @@ body {
 form {
     display: flex;
     justify-content: center;
-    align-items: left;
     flex-direction: column;
     flex-wrap: wrap;
     position: absolute;
@@ -88,14 +87,13 @@ form {
 .form__label {
     display: flex;
     flex-direction: row;
-    gap: .25em;
     font-size: .8em;
     margin: 4px;
     margin-left: 20px;
     text-align: left;
     justify-content: space-between;
     position: relative;
-    align-items: baseline;
+    align-items: left;
 }
 
 .form__label input {
@@ -103,7 +101,9 @@ form {
     width: fit-content;
     background-color: rgb(240, 240, 240);
     border: none;
-    align-items: flex-end;
+    align-items: right;
+    margin-left: 20px;
+    border-radius: 4px;
 }
 
 .form__label--select {
@@ -118,17 +118,13 @@ form {
 }
 
 .form__label--select img {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(240, 240, 240);
-
+    background-color: transparent
 }
 
 .form__check {
     display: flex;
     align-items: center;
 }
-
 
 .form__check p {
     font-size: .8em;
@@ -138,54 +134,25 @@ form {
     margin-left: 20px;
 }
 
+fieldset {
+    border: none;
+}
+
 .toggle {
     display: none;
 }
-
 
 label[for="toggle"] {
     display: block;
     cursor: pointer;
     width: 40px;
     height: 100%;
-
 }
-
 
 .toggle:checked {
     display: block;
     bottom: 0;
     left: 50px;
-}
-
-.form__button {
-    display: flex;
-    justify-content: flex-end;
-    margin: 4px;
-}
-
-.btn__cancel {
-    background-color: lightgray;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-.btn__save {
-    background-color: #39b298;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 4px;
-    margin-left: 10px;
 }
 
 .sidepanel {
@@ -218,9 +185,50 @@ label[for="toggle"] {
     padding: 20px;
     font-size: .8em;
     line-height: 1.5;
+    margin-bottom: 30%;
 }
 
-.sidepanel .closebtn {
+.sidepanel a {
+    color: #3b3b3b;
+    font-weight: bold;
+}
+
+.sidepanel a:visited {
+    accent-color: var(--accent-color);
+}
+
+.form__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.cancel__button {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.save__button {
+    background-color: #39b298;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.sidepanel .close__button {
     position: absolute;
     top: 0;
     right: 25px;
@@ -229,7 +237,7 @@ label[for="toggle"] {
     margin-left: 50px;
 }
 
-.openbtn {
+.open__button {
     border-radius: 50%;
     padding: 20px;
     margin-top: 20px;
@@ -241,80 +249,154 @@ label[for="toggle"] {
     background-color: #3b3b3b;
 }
 
-.openbtn:hover {
+.open__button:hover {
     background-color: #444;
 }
 
-.openbtn:active {
+.open__button:active {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     /* Or the below also works */
     /* transform: rotate(180deg); */
 }
 
+@media(max-width: 944px) {
+    body {
+        height: 100%;
+        width: 100%;
+    }
 
-/* @media(max-width: 944px) {
-    body {}
-}
-
-@media(max-width: 860px) {
     .card {
+        display: block;
+        background: gray;
+        flex-wrap: wrap;
+        overflow: visible;
+        margin: 0;
+        width: 65%;
+        height: 100%;
+    }
 
-        display: flex;
+    .card__profile {
+        padding: 0 0 10px 0;
+        border-radius: 0;
+    }
+
+    .card__profile img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .card__profile h4 {
+        padding: 0;
+    }
+
+    .card__profile p {
+        padding: 0 8px 0 8px;
+        font-size: 12px;
+        margin: 0 4px 0 4px;
+    }
+
+    .card__info {
+        border-radius: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
 
     }
 
-    .card__profile {}
+    form {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
 
-    .card__profile img {}
+    .form__label {
+        margin-left: 0;
+        flex-direction: row;
+    }
 
-    .card__profile h4 {}
+    .sidepanel {
+        border-radius: 0;
+        height: 100%;
+    }
 
-    .card__profile p {}
+    .open__button {
+        transform: rotate(90deg);
+    }
 
-    .card__info {}
+    .open__button:active {
+        transform: rotate(270deg)
+    }
+}
 
-    form {}
+@media(max-width: 860px) {
+    body {
+        height: 100%;
+        width: 100%;
+    }
 
-    .form__label {}
+    .card {
+        display: block;
+        background: gray;
+        flex-wrap: wrap;
+        overflow: visible;
+        margin: 0;
+        width: 65%;
+        height: 100%;
+    }
 
-    .form__label input {}
+    .card__profile {
+        padding: 0 0 10px 0;
+        border-radius: 0;
+    }
 
-    .form__label--select {}
+    .card__profile img {
+        height: 80px;
+        width: 80px;
+    }
 
-    .form__label--select img {}
+    .card__profile h4 {
+        padding: 0;
+    }
 
-    .form__check {}
+    .card__profile p {
+        padding: 0 8px 0 8px;
+        font-size: 12px;
+        margin: 0 4px 0 4px;
+    }
 
+    .card__info {
+        border-radius: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
 
-    .form__check p {}
+    }
 
-    .toggle {}
+    form {
+        margin-top: 10px;
+        padding: 0;
+        display: flex;
+    }
 
+    .form__label {
+        margin-left: 0;
+        flex-direction: row;
+    }
 
-    label[for="toggle"] {}
+    .sidepanel {
+        border-radius: 0;
+        height: 100%;
+    }
 
+    .open__button {
+        transform: rotate(90deg);
+        margin-bottom: 5px;
+    }
 
-    .toggle:checked {}
+    .open__button:active {
+        transform: rotate(270deg)
+    }
 
-    .form__button {}
-
-    .btn__cancel {}
-
-    .btn__save {}
-
-    .sidepanel {}
-
-    .sidepanel h4 {}
-
-    .sidepanel p {}
-
-    .sidepanel .closebtn {}
-
-    .openbtn {}
-
-    .openbtn:hover {}
-
-    .openbtn:active {}
-
-} */
+}
